@@ -20,10 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BT\BehaviourTree.cpp" />
+    <ClCompile Include="BT\Nodes\BTNode.cpp" />
     <ClCompile Include="BT\Nodes\Composite\BTCompositeNode.cpp" />
     <ClCompile Include="BT\Nodes\Composite\BTRandomSelector.cpp" />
     <ClCompile Include="BT\Nodes\Composite\BTSelectorNode.cpp" />
     <ClCompile Include="BT\Nodes\Composite\BTSequenceNode.cpp" />
+    <ClCompile Include="BT\Nodes\Decorator\BTDecoratorNode.cpp" />
+    <ClCompile Include="BT\Nodes\Decorator\BTNotDecorator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BT\BehaviourTree.h" />
@@ -32,6 +35,8 @@
     <ClInclude Include="BT\Nodes\Composite\BTRandomSelector.h" />
     <ClInclude Include="BT\Nodes\Composite\BTSelectorNode.h" />
     <ClInclude Include="BT\Nodes\Composite\BTSequenceNode.h" />
+    <ClInclude Include="BT\Nodes\Decorator\BTDecoratorNode.h" />
+    <ClInclude Include="BT\Nodes\Decorator\BTNotDecorator.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -30,21 +30,10 @@ namespace BT
 {
 	ENodeResult BTRandomSelector::Execute(void* userData)
 	{
-		if (m_pendingChild != nullptr)
+		if (ENodeResult pendingResult; 
+			ExecutePending(userData, pendingResult))
 		{
-			switch (m_pendingChild->Execute(userData))
-			{
-			case ENodeResult::Failed:
-				m_pendingChild = nullptr;
-				break;
-
-			case ENodeResult::Succeeded:
-				m_pendingChild = nullptr;
-				return ENodeResult::Succeeded;
-
-			case ENodeResult::Pending:
-				return ENodeResult::Pending;
-			}
+			return pendingResult;
 		}
 
 		vector runnable = { m_children };

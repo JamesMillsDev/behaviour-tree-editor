@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Nodes\Composite">
       <UniqueIdentifier>{9d6396e1-fbd7-419e-9ca9-684788374884}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Nodes\Decorator">
+      <UniqueIdentifier>{78b60561-83f3-47f8-8bc6-37d033842d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Nodes\Decorator">
+      <UniqueIdentifier>{59e7d4a2-c310-4774-9e08-f105f871169a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BT\BehaviourTree.cpp">
@@ -41,6 +47,15 @@
     </ClCompile>
     <ClCompile Include="BT\Nodes\Composite\BTRandomSelector.cpp">
       <Filter>Source Files\Nodes\Composite</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Decorator\BTDecoratorNode.cpp">
+      <Filter>Source Files\Nodes\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\BTNode.cpp">
+      <Filter>Source Files\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Decorator\BTNotDecorator.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="BT\Nodes\Composite\BTRandomSelector.h">
       <Filter>Header Files\Nodes\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Decorator\BTDecoratorNode.h">
+      <Filter>Header Files\Nodes\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Decorator\BTNotDecorator.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

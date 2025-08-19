@@ -21,7 +21,6 @@ namespace BT
 
 	protected:
 		vector<BTNode*> m_children;
-		BTNode* m_pendingChild;
 
 	};
 }
