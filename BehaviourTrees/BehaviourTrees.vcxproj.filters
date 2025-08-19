@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Nodes\Decorator">
       <UniqueIdentifier>{59e7d4a2-c310-4774-9e08-f105f871169a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Nodes\Task">
+      <UniqueIdentifier>{b9e89b91-7db3-4471-ac1e-e89422efc624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Nodes\Task">
+      <UniqueIdentifier>{3e1e8a66-1bf4-4787-85c4-76174cd60878}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BT\BehaviourTree.cpp">
@@ -55,7 +61,13 @@
       <Filter>Source Files\Nodes</Filter>
     </ClCompile>
     <ClCompile Include="BT\Nodes\Decorator\BTNotDecorator.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Nodes\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Task\BTTaskNode.cpp">
+      <Filter>Source Files\Nodes\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Task\BTWaitNode.cpp">
+      <Filter>Source Files\Nodes\Task</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,7 +93,13 @@
       <Filter>Header Files\Nodes\Decorator</Filter>
     </ClInclude>
     <ClInclude Include="BT\Nodes\Decorator\BTNotDecorator.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Nodes\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Task\BTTaskNode.h">
+      <Filter>Header Files\Nodes\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Task\BTWaitNode.h">
+      <Filter>Header Files\Nodes\Task</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

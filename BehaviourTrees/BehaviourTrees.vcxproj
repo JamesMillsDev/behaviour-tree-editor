@@ -27,6 +27,8 @@
     <ClCompile Include="BT\Nodes\Composite\BTSequenceNode.cpp" />
     <ClCompile Include="BT\Nodes\Decorator\BTDecoratorNode.cpp" />
     <ClCompile Include="BT\Nodes\Decorator\BTNotDecorator.cpp" />
+    <ClCompile Include="BT\Nodes\Task\BTTaskNode.cpp" />
+    <ClCompile Include="BT\Nodes\Task\BTWaitNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BT\BehaviourTree.h" />
@@ -37,6 +39,8 @@
     <ClInclude Include="BT\Nodes\Composite\BTSequenceNode.h" />
     <ClInclude Include="BT\Nodes\Decorator\BTDecoratorNode.h" />
     <ClInclude Include="BT\Nodes\Decorator\BTNotDecorator.h" />
+    <ClInclude Include="BT\Nodes\Task\BTTaskNode.h" />
+    <ClInclude Include="BT\Nodes\Task\BTWaitNode.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
