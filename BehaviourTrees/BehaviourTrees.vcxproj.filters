@@ -36,6 +36,12 @@
     <ClCompile Include="BT\Nodes\Composite\BTSequenceNode.cpp">
       <Filter>Source Files\Nodes\Composite</Filter>
     </ClCompile>
+    <ClCompile Include="BT\Nodes\Composite\BTCompositeNode.cpp">
+      <Filter>Source Files\Nodes\Composite</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Composite\BTRandomSelector.cpp">
+      <Filter>Source Files\Nodes\Composite</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BT\BehaviourTree.h">
@@ -48,6 +54,12 @@
       <Filter>Header Files\Nodes\Composite</Filter>
     </ClInclude>
     <ClInclude Include="BT\Nodes\Composite\BTSequenceNode.h">
+      <Filter>Header Files\Nodes\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Composite\BTCompositeNode.h">
+      <Filter>Header Files\Nodes\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Composite\BTRandomSelector.h">
       <Filter>Header Files\Nodes\Composite</Filter>
     </ClInclude>
   </ItemGroup>

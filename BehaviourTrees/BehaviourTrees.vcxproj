@@ -20,12 +20,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BT\BehaviourTree.cpp" />
+    <ClCompile Include="BT\Nodes\Composite\BTCompositeNode.cpp" />
+    <ClCompile Include="BT\Nodes\Composite\BTRandomSelector.cpp" />
     <ClCompile Include="BT\Nodes\Composite\BTSelectorNode.cpp" />
     <ClCompile Include="BT\Nodes\Composite\BTSequenceNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BT\BehaviourTree.h" />
     <ClInclude Include="BT\Nodes\BTNode.h" />
+    <ClInclude Include="BT\Nodes\Composite\BTCompositeNode.h" />
+    <ClInclude Include="BT\Nodes\Composite\BTRandomSelector.h" />
     <ClInclude Include="BT\Nodes\Composite\BTSelectorNode.h" />
     <ClInclude Include="BT\Nodes\Composite\BTSequenceNode.h" />
   </ItemGroup>
