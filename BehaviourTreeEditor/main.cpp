@@ -1,9 +1,15 @@
-#include <cstdlib>
-#include <iostream>
+#include "Application/Application.h"
 
-int main(int argC, char* argV[])
+#if _DEBUG
+#define _CRTDBG_MAP_ALLOC
+#include <crtdbg.h>
+#endif
+
+int main()
 {
-	std::cout << "Hello, World!\n";
+#if _DEBUG
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+#endif
 
-	return EXIT_SUCCESS;
+	return Application::Launch();
 }
