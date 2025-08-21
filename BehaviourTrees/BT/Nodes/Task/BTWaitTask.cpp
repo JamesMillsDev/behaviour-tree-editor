@@ -1,15 +1,15 @@
-#include "BTWaitNode.h"
+#include "BTWaitTask.h"
 
 using std::chrono::high_resolution_clock;
 
 namespace BT
 {
-	BTWaitNode::BTWaitNode(float time)
+	BTWaitTask::BTWaitTask(float time)
 		: m_time{ time }, m_isRunning{ false }
 	{
 	}
 
-	ENodeResult BTWaitNode::Execute(void* userData)
+	ENodeResult BTWaitTask::Execute(void* userData)
 	{
 		// If we haven't run the clock before, store the current time
 		if (!m_isRunning)

@@ -66,10 +66,22 @@
     <ClCompile Include="BT\Nodes\Task\BTTaskNode.cpp">
       <Filter>Source Files\Nodes\Task</Filter>
     </ClCompile>
-    <ClCompile Include="BT\Nodes\Task\BTWaitNode.cpp">
+    <ClCompile Include="BT\Nodes\Task\BTWaitTask.cpp">
       <Filter>Source Files\Nodes\Task</Filter>
     </ClCompile>
     <ClCompile Include="BT\Nodes\Task\BTLogTask.cpp">
+      <Filter>Source Files\Nodes\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Decorator\BTRepeatDecorator.cpp">
+      <Filter>Source Files\Nodes\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Decorator\BTRetryDecorator.cpp">
+      <Filter>Source Files\Nodes\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Decorator\BTCooldownDecorator.cpp">
+      <Filter>Source Files\Nodes\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\Nodes\Task\BTStaticResultTask.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -101,10 +113,22 @@
     <ClInclude Include="BT\Nodes\Task\BTTaskNode.h">
       <Filter>Header Files\Nodes\Task</Filter>
     </ClInclude>
-    <ClInclude Include="BT\Nodes\Task\BTWaitNode.h">
+    <ClInclude Include="BT\Nodes\Task\BTWaitTask.h">
       <Filter>Header Files\Nodes\Task</Filter>
     </ClInclude>
     <ClInclude Include="BT\Nodes\Task\BTLogTask.h">
+      <Filter>Header Files\Nodes\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Decorator\BTRepeatDecorator.h">
+      <Filter>Header Files\Nodes\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Decorator\BTRetryDecorator.h">
+      <Filter>Header Files\Nodes\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Decorator\BTCooldownDecorator.h">
+      <Filter>Header Files\Nodes\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\Nodes\Task\BTStaticResultTask.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
