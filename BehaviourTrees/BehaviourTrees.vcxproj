@@ -27,6 +27,7 @@
     <ClCompile Include="BT\Nodes\Composite\BTSequenceNode.cpp" />
     <ClCompile Include="BT\Nodes\Decorator\BTDecoratorNode.cpp" />
     <ClCompile Include="BT\Nodes\Decorator\BTNotDecorator.cpp" />
+    <ClCompile Include="BT\Nodes\Task\BTLogTask.cpp" />
     <ClCompile Include="BT\Nodes\Task\BTTaskNode.cpp" />
     <ClCompile Include="BT\Nodes\Task\BTWaitNode.cpp" />
   </ItemGroup>
@@ -39,6 +40,7 @@
     <ClInclude Include="BT\Nodes\Composite\BTSequenceNode.h" />
     <ClInclude Include="BT\Nodes\Decorator\BTDecoratorNode.h" />
     <ClInclude Include="BT\Nodes\Decorator\BTNotDecorator.h" />
+    <ClInclude Include="BT\Nodes\Task\BTLogTask.h" />
     <ClInclude Include="BT\Nodes\Task\BTTaskNode.h" />
     <ClInclude Include="BT\Nodes\Task\BTWaitNode.h" />
   </ItemGroup>

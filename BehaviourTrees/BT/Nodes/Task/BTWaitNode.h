@@ -1,5 +1,11 @@
 #pragma once
+
 #include "BTTaskNode.h"
+
+#include <chrono>
+
+typedef std::chrono::duration<float> duration;
+typedef std::chrono::time_point<std::chrono::high_resolution_clock> time_point;
 
 namespace BT
 {
@@ -13,6 +19,9 @@ namespace BT
 
 	private:
 		float m_time;
+		bool m_isRunning;
+
+		time_point m_nodeStart;
 
 	};
 }
