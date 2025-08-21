@@ -1,5 +1,9 @@
 #include "Application.h"
 
+#define DEFAULT_WINDOW_WIDTH 1600
+#define DEFAULT_WINDOW_HEIGHT 900
+#define DEFAULT_WINDOW_TITLE "Behaviour Tree Editor"
+
 #include <cstdlib>
 #include <raylib.h>
 
@@ -41,7 +45,8 @@ float Application::Height() const
 }
 
 Application::Application()
-	: m_width{ 1600 }, m_height{ 900 }, m_title{ "Behaviour Tree Editor" }
+	: m_width{ DEFAULT_WINDOW_WIDTH }, m_height{ DEFAULT_WINDOW_HEIGHT },
+	m_title{ DEFAULT_WINDOW_TITLE }
 {
 }
 
