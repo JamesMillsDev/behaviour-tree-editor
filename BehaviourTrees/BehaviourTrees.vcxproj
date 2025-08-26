@@ -19,10 +19,38 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BehaviourTree.h" />
+    <ClCompile Include="BT\BehaviourTree.cpp" />
+    <ClCompile Include="BT\Nodes\BTNode.cpp" />
+    <ClCompile Include="BT\Nodes\Composite\BTCompositeNode.cpp" />
+    <ClCompile Include="BT\Nodes\Composite\BTRandomSelector.cpp" />
+    <ClCompile Include="BT\Nodes\Composite\BTSelectorNode.cpp" />
+    <ClCompile Include="BT\Nodes\Composite\BTSequenceNode.cpp" />
+    <ClCompile Include="BT\Nodes\Decorator\BTCooldownDecorator.cpp" />
+    <ClCompile Include="BT\Nodes\Decorator\BTDecoratorNode.cpp" />
+    <ClCompile Include="BT\Nodes\Decorator\BTNotDecorator.cpp" />
+    <ClCompile Include="BT\Nodes\Decorator\BTRepeatDecorator.cpp" />
+    <ClCompile Include="BT\Nodes\Decorator\BTRetryDecorator.cpp" />
+    <ClCompile Include="BT\Nodes\Task\BTLogTask.cpp" />
+    <ClCompile Include="BT\Nodes\Task\BTStaticResultTask.cpp" />
+    <ClCompile Include="BT\Nodes\Task\BTTaskNode.cpp" />
+    <ClCompile Include="BT\Nodes\Task\BTWaitTask.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BehaviourTree.cpp" />
+    <ClInclude Include="BT\BehaviourTree.h" />
+    <ClInclude Include="BT\Nodes\BTNode.h" />
+    <ClInclude Include="BT\Nodes\Composite\BTCompositeNode.h" />
+    <ClInclude Include="BT\Nodes\Composite\BTRandomSelector.h" />
+    <ClInclude Include="BT\Nodes\Composite\BTSelectorNode.h" />
+    <ClInclude Include="BT\Nodes\Composite\BTSequenceNode.h" />
+    <ClInclude Include="BT\Nodes\Decorator\BTCooldownDecorator.h" />
+    <ClInclude Include="BT\Nodes\Decorator\BTDecoratorNode.h" />
+    <ClInclude Include="BT\Nodes\Decorator\BTNotDecorator.h" />
+    <ClInclude Include="BT\Nodes\Decorator\BTRepeatDecorator.h" />
+    <ClInclude Include="BT\Nodes\Decorator\BTRetryDecorator.h" />
+    <ClInclude Include="BT\Nodes\Task\BTLogTask.h" />
+    <ClInclude Include="BT\Nodes\Task\BTStaticResultTask.h" />
+    <ClInclude Include="BT\Nodes\Task\BTTaskNode.h" />
+    <ClInclude Include="BT\Nodes\Task\BTWaitTask.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -99,6 +127,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -117,6 +146,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,6 +165,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,6 +184,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
