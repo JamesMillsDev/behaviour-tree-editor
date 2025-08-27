@@ -11,8 +11,8 @@ namespace BehaviourTree::Editor::Graph
 
 	public:
 		void SetScreenCenter(Vector2 center);
-		void Render(Rectangle vp);
-		void Tick();
+		void Render(Rectangle vp) const;
+		void Tick(Rectangle vp);
 
 	private:
 		float m_dpi;

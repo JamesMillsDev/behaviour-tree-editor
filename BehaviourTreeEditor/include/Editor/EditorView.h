@@ -20,16 +20,18 @@ namespace BehaviourTree::Editor
 		const char* Name() const;
 
 	protected:
+		Rectangle m_rectangle;
+
+	protected:
 		virtual void Initialise();
 		void Render();
 		void Tick(float dt);
 		
-		virtual void OnRender(Rectangle rect) = 0;
+		virtual void OnRender() = 0;
 		virtual void OnTick(float dt) = 0;
 
 	private:
 		string m_name;
-		Rectangle m_rectangle;
 
 	};
 }

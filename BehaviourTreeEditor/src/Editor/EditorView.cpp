@@ -34,7 +34,7 @@ namespace BehaviourTree::Editor
 			.height = Application::Instance()->Height()
 		};
 
-		OnRender(m_rectangle);
+		OnRender();
 	}
 
 	void EditorView::Tick(float dt)

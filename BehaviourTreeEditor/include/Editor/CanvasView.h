@@ -26,7 +26,7 @@ namespace BehaviourTree::Editor
 		// Inherited via EditorView
 		void Initialise() override;
 
-		void OnRender(Rectangle rect) override;
+		void OnRender() override;
 		void OnTick(float dt) override;
 
 	private:

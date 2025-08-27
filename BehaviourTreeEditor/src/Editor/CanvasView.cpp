@@ -22,6 +22,8 @@ namespace BehaviourTree::Editor
 		}
 
 		m_nodes.clear();
+
+		delete m_grid;
 	}
 
 	void CanvasView::Initialise()
@@ -32,33 +34,9 @@ namespace BehaviourTree::Editor
 			});
 	}
 
-	void CanvasView::OnRender(Rectangle rect)
+	void CanvasView::OnRender()
 	{
-		m_grid->Render(rect);
-		/*static Color minorColor = FromHex(0x2d2d2dff);
-		static Color majorColor = FromHex(0x3a3a3aff);
-
-		const float gridSpacing = m_baseGridSpacing * (1.f / m_zoomLevel);
-
-		const int xCount = static_cast<int>(rect.width / gridSpacing);
-		const int yCount = static_cast<int>(rect.height / gridSpacing);
-
-		for (int i = 0; i < xCount * yCount; ++i)
-		{
-			const Color col = i % 5 == 0 ? majorColor : minorColor;
-
-			DrawLineV(
-				Vector2{ static_cast<float>(i) * gridSpacing, 0 } + m_offset,
-				Vector2{ static_cast<float>(i) * gridSpacing, rect.height } + m_offset,
-				col
-			);
-
-			DrawLineV(
-				Vector2{ 0, static_cast<float>(i) * gridSpacing } + m_offset,
-				Vector2{ rect.width, static_cast<float>(i) * gridSpacing } + m_offset,
-				col
-			);
-		}*/
+		m_grid->Render(m_rectangle);
 
 		/*for (const auto& node : m_nodes)
 		{
@@ -68,7 +46,7 @@ namespace BehaviourTree::Editor
 
 	void CanvasView::OnTick(float dt)
 	{
-		m_grid->Tick();
+		m_grid->Tick(m_rectangle);
 
 		/*for (const auto& node : m_nodes)
 		{
