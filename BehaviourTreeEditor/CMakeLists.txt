@@ -32,11 +32,17 @@ file(GLOB_RECURSE EDITOR_SOURCES
 
 # Automatically find all header files (for IDE support)
 file(GLOB_RECURSE EDITOR_HEADERS
-    "src/*.h"
+    "include/*.h"
 )
 
 # Create executable
 add_executable(BehaviourTreeEditor ${EDITOR_SOURCES} ${EDITOR_HEADERS})
+
+# Add sources
+target_sources(BehaviourTreeEditor PRIVATE
+    ${EDITOR_SOURCES}
+    ${EDITOR_HEADERS}  # For IDE project view
+)
 
 target_include_directories(BehaviourTreeEditor
     PUBLIC

@@ -1,35 +1,50 @@
 #pragma once
 
-class Application
+#include <functional>
+#include <vector>
+
+using std::function;
+using std::vector;
+
+namespace BehaviourTree::Editor
 {
-public:
-	static int Launch();
-	static Application const* Instance();
+	typedef function<void(float, float)> ScreenResizeFunction;
 
-public:
-	float Width() const;
-	float Height() const;
+	class EditorView;
 
-private:
-	static Application* m_instance;
+	class Application
+	{
+	public:
+		static int Launch();
+		static Application* Instance();
 
-private:
-	float m_width;
-	float m_height;
-	const char* m_title;
+	public:
+		float Width() const;
+		float Height() const;
 
-private:
-	Application();
-	~Application();
+		void ListenScreenResize(const ScreenResizeFunction& fnc);
 
-private:
-	int Run();
+	private:
+		static Application* m_instance;
 
-	void Initialise();
+	private:
+		float m_width;
+		float m_height;
+		const char* m_title;
 
-	void Tick(float dt);
-	void Render();
+		vector<EditorView*> m_views;
+		vector<ScreenResizeFunction> m_screenResizeCallbacks;
 
-	void Shutdown();
+	private:
+		Application();
+		~Application();
 
-};
+	private:
+		int Run();
+
+		void Initialise() const;
+		void Tick(float dt) const;
+		void Render() const;
+
+	};
+}
