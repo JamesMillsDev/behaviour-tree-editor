@@ -10,7 +10,7 @@
 namespace BehaviourTree::Editor
 {
 	CanvasView::CanvasView()
-		: EditorView{ "Canvas" }, m_grid{ new Grid{ 4.f, 10.f } }
+		: EditorView{ "Canvas" }, m_grid{ new Grid{ 2.f, 10.f } }
 	{
 	}
 

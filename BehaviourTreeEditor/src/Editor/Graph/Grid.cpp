@@ -21,7 +21,7 @@ namespace BehaviourTree::Editor::Graph
 	void Grid::Render(Rectangle vp) const
 	{
 		static Color minorColor = FromHex(0x2d2d2dff);
-		static Color majorColor = FromHex(0x3a3a3aff);
+		static Color majorColor = FromHex(0x4b4b4bff);
 
 		rlPushMatrix();
 		rlLoadIdentity();
@@ -104,7 +104,7 @@ namespace BehaviourTree::Editor::Graph
 
 		if (IsMouseButtonDown(MOUSE_BUTTON_MIDDLE) && CheckCollisionPointRec(GetMousePosition(), vp))
 		{
-			m_offset += GetMouseDelta() * .25f;
+			m_offset += GetMouseDelta() * (1.f / m_dpi);
 		}
 	}
 }
