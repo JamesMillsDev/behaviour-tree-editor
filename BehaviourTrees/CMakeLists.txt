@@ -2,6 +2,23 @@ cmake_minimum_required(VERSION 3.16)
 
 project(BehaviourTrees VERSION 1.0.0)
 
+option(ENABLE_RAYLIB "Enable Raylib support" OFF)
+option(ENABLE_GLM "Enable GLM support" OFF)
+
+if(ENABLE_GLM)
+    # Include FetchContent module
+    include(FetchContent)
+
+    # Fetch nlohmann_json
+    FetchContent_Declare(
+        glm
+        GIT_REPOSITORY https://github.com/g-truc/glm.git
+        GIT_TAG 1.0.1
+    )
+
+    FetchContent_MakeAvailable(glm)
+endif()
+
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -16,10 +33,17 @@ target_compile_definitions(BehaviourTrees
         DLL_EXPORT
 )
 
-if(RAYLIB)
+if(ENABLE_RAYLIB)
     target_compile_definitions(BehaviourTrees 
         PRIVATE 
             RAYLIB_SUPPORT_ENABLED
+    )
+endif()
+
+if(ENABLE_GLM)
+    target_compile_definitions(BehaviourTrees 
+        PRIVATE 
+            GLM_SUPPORT_ENABLED
     )
 endif()
 
@@ -49,11 +73,24 @@ target_include_directories(BehaviourTrees
         ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
+if(ENABLE_GLM)
+    target_link_libraries(BehaviourTrees
+        PRIVATE
+            glm
+    )
+endif()
+
 # Link dependencies
 # Note: Using PRIVATE because nlohmann_json is header-only and fetched via FetchContent
 # Users of this library will get nlohmann_json through the config file dependency
 target_link_libraries(BehaviourTrees
     PRIVATE
         nlohmann_json::nlohmann_json
-        raylib
 )
+
+if(ENABLE_RAYLIB)
+    target_link_libraries(BehaviourTrees
+        PRIVATE
+            raylib
+    )
+endif()

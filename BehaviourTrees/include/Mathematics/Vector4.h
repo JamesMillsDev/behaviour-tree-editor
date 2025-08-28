@@ -8,6 +8,16 @@ typedef Vector3 RayVector3;
 typedef Vector4 RayVector4;
 #endif
 
+#ifdef GLM_SUPPORT_ENABLED
+#include <glm/vec2.hpp>
+#include <glm/vec3.hpp>
+#include <glm/vec4.hpp>
+
+typedef glm::vec2 GlmVector2;
+typedef glm::vec3 GlmVector3;
+typedef glm::vec4 GlmVector4;
+#endif
+
 #include "BehaviourTrees.h"
 
 namespace BT::Math
@@ -74,6 +84,18 @@ namespace BT::Math
 		explicit operator RayVector2() const;
 		explicit operator RayVector3() const;
 		explicit operator RayVector4() const;
+#endif
+
+#ifdef GLM_SUPPORT_ENABLED
+	public:
+		Vector4(GlmVector2 other, float z, float w);
+		Vector4(GlmVector3 other, float w);
+		explicit Vector4(GlmVector4 other);
+
+	public:
+		explicit operator GlmVector2() const;
+		explicit operator GlmVector3() const;
+		explicit operator GlmVector4() const;
 #endif
 
 	};

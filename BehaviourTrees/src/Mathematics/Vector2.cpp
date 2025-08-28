@@ -79,7 +79,7 @@ namespace BT::Math
 
 	bool Vector2::operator==(const Vector2& other) const
 	{
-		return Maths::CompareFloat(x, other.x) && 
+		return Maths::CompareFloat(x, other.x) &&
 			Maths::CompareFloat(y, other.y);
 	}
 
@@ -175,5 +175,37 @@ namespace BT::Math
 		return { x, y, 0, 1 };
 	}
 #endif // RAYLIB_SUPPORT_ENABLED
+
+#ifdef GLM_SUPPORT_ENABLED
+	Vector2::Vector2(const GlmVector2 other)
+		: x{ other.x }, y{ other.y }
+	{
+	}
+
+	Vector2::Vector2(const GlmVector3 other)
+		: x{ other.x }, y{ other.y }
+	{
+	}
+
+	Vector2::Vector2(const GlmVector4 other)
+		: x{ other.x }, y{ other.y }
+	{
+	}
+
+	Vector2::operator glm::vec<2, float>() const
+	{
+		return { x, y };
+	}
+
+	Vector2::operator glm::vec<3, float>() const
+	{
+		return { x, y, 0 };
+	}
+
+	Vector2::operator glm::vec<4, float>() const
+	{
+		return { x, y, 0, 1 };
+	}
+#endif
 
 }

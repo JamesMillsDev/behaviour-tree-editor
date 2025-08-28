@@ -172,7 +172,7 @@ namespace BT::Math
 		return values[index];
 	}
 
-	#ifdef RAYLIB_SUPPORT_ENABLED
+#ifdef RAYLIB_SUPPORT_ENABLED
 	Vector4::Vector4(const RayVector2 other, const float z, const float w)
 		: x{ other.x }, y{ other.y }, z{ z }, w{ w }
 	{
@@ -203,4 +203,36 @@ namespace BT::Math
 		return { x, y, z, w };
 	}
 #endif // RAYLIB_SUPPORT_ENABLED
+
+#ifdef GLM_SUPPORT_ENABLED
+	Vector4::Vector4(const GlmVector2 other, const float z, const float w)
+		: x{ other.x }, y{ other.y }, z{ z }, w{ w }
+	{
+	}
+
+	Vector4::Vector4(const GlmVector3 other, const float w)
+		: x{ other.x }, y{ other.y }, z{ other.z }, w{ w }
+	{
+	}
+
+	Vector4::Vector4(const GlmVector4 other)
+		: x{ other.x }, y{ other.y }, z{ other.z }, w{ other.w }
+	{
+	}
+
+	Vector4::operator glm::vec<2, float>() const
+	{
+		return { x, y };
+	}
+
+	Vector4::operator glm::vec<3, float>() const
+	{
+		return { x, y, z };
+	}
+
+	Vector4::operator glm::vec<4, float>() const
+	{
+		return { x, y, z, w };
+	}
+#endif
 }

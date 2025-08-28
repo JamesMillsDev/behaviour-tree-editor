@@ -10,4 +10,4 @@ namespace BT
 	}
 }
 
-#define REFLECT_NODE_NoParams(TYPE) \
+//#define REFLECT_NODE_NoParams(TYPE) \
