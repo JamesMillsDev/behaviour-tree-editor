@@ -11,7 +11,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Create the shared library
 add_library(BehaviourTrees SHARED)
 
-target_compile_definitions(BehaviourTrees PRIVATE DLL_EXPORT)
+target_compile_definitions(BehaviourTrees 
+    PRIVATE 
+        DLL_EXPORT
+)
+
+if(RAYLIB)
+    target_compile_definitions(BehaviourTrees 
+        PRIVATE 
+            RAYLIB_SUPPORT_ENABLED
+    )
+endif()
 
 # Automatically find all source files
 file(GLOB_RECURSE BEHAVIOUR_TREES_SOURCES
@@ -45,4 +55,5 @@ target_include_directories(BehaviourTrees
 target_link_libraries(BehaviourTrees
     PRIVATE
         nlohmann_json::nlohmann_json
+        raylib
 )

@@ -11,6 +11,9 @@ namespace BT
 	class DLL BTLogTask : public BTTaskNode
 	{
 	public:
+		REFLECT_NODE()
+
+	public:
 		BTLogTask(string message);
 
 	public:

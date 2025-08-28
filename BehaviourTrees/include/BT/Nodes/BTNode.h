@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BehaviourTrees.h"
+#include "Reflection/ReflectedNode.h"
 
 namespace BT
 {

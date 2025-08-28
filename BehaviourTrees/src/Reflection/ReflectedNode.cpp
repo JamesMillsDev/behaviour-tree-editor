@@ -1,4 +1,4 @@
-#include "Reflection/NodeRegistry.h"
+#include "Reflection/ReflectedNode.h"
 
 namespace BT::Reflection
 {
