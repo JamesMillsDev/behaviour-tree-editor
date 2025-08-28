@@ -1,0 +1,47 @@
+{
+    "composite": [
+        {
+            "id": "BTSelectorNode",
+            "data": []
+        },
+        {
+            "id": "BTSequenceNode",
+            "data": []
+        }
+    ],
+    "decorator": [
+        {
+            "id": "BTNotDecorator",
+            "data": []
+        }
+    ],
+    "task": [
+        {
+            "id": "BTLogTask",
+            "data": [
+                {
+                    "name": "message",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "id": "BTWaitTask",
+            "data": [
+                {
+                    "name": "time",
+                    "type": "float"
+                }
+            ]
+        },
+        {
+            "id": "BTStaticResultTask",
+            "data":[
+                {
+                    "name": "result",
+                    "type": "ENodeResult"
+                }
+            ]
+        }
+    ]
+}

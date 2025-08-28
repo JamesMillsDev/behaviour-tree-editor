@@ -1,5 +1,7 @@
 #pragma once
 
+#include "BehaviourTrees.h"
+
 namespace BT
 {
 	enum class ENodeResult : unsigned char
@@ -9,7 +11,7 @@ namespace BT
 		Pending
 	};
 
-	class BTNode
+	class DLL BTNode
 	{
 		friend class BehaviourTree;
 

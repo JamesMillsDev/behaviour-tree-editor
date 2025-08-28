@@ -4,7 +4,7 @@
 
 namespace BT
 {
-	class BTSequenceNode final : public BTCompositeNode
+	class DLL BTSequenceNode final : public BTCompositeNode
 	{
 	public:
 		ENodeResult Execute(void* userData) override;

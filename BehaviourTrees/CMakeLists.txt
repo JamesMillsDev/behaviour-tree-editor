@@ -8,8 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # nlohmann_json is available from parent via FetchContent
 
-# Create the static library
-add_library(BehaviourTrees STATIC)
+# Create the shared library
+add_library(BehaviourTrees SHARED)
+
+target_compile_definitions(BehaviourTrees PRIVATE DLL_EXPORT)
 
 # Automatically find all source files
 file(GLOB_RECURSE BEHAVIOUR_TREES_SOURCES

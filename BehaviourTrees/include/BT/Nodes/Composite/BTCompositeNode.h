@@ -1,5 +1,6 @@
 #pragma once
 
+#include "BehaviourTrees.h"
 #include "BT/Nodes/BTNode.h"
 
 #include <vector>
@@ -8,7 +9,7 @@ using std::vector;
 
 namespace BT
 {
-	class BTCompositeNode : public BTNode
+	class DLL BTCompositeNode : public BTNode
 	{
 	public:
 		BTCompositeNode();

@@ -1,0 +1,42 @@
+{
+    "id": "BTSelectorNode",
+    "children": [
+        {
+            "id": "BTSequenceNode",
+            "children": [
+                {
+                    "id": "BTLogTask",
+                    "data": [
+                        {
+                            "name": "message",
+                            "value": "This is a sample message!"
+                        }
+                    ]
+                },
+                {
+                    "id": "BTWaitTask",
+                    "data": [
+                        {
+                            "name": "time",
+                            "value": 1.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BTNotDecorator",
+            "children": [
+                {
+                    "id": "BTStaticResultTask",
+                    "data": [
+                        {
+                            "name": "result",
+                            "value": "Failed"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

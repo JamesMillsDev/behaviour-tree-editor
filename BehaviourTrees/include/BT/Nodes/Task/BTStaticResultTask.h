@@ -4,7 +4,7 @@
 
 namespace BT
 {
-	class BTStaticResultTask : public BTTaskNode
+	class DLL BTStaticResultTask : public BTTaskNode
 	{
 	public:
 		BTStaticResultTask(ENodeResult staticResult);

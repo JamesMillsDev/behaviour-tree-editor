@@ -4,7 +4,7 @@
 
 namespace BT
 {
-	class BTNotDecorator : public BTDecoratorNode
+	class DLL BTNotDecorator : public BTDecoratorNode
 	{
 	public:
 		ENodeResult Execute(void* userData) override;

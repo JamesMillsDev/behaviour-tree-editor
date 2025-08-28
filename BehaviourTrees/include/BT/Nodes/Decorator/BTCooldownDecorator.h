@@ -9,7 +9,7 @@ typedef std::chrono::time_point<std::chrono::high_resolution_clock> time_point;
 
 namespace BT
 {
-	class BTCooldownDecorator : public BTDecoratorNode
+	class DLL BTCooldownDecorator : public BTDecoratorNode
 	{
 	public:
 		BTCooldownDecorator(float time);

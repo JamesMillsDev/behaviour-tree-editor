@@ -4,7 +4,7 @@
 
 namespace BT
 {
-	class BTDecoratorNode : public BTNode
+	class DLL BTDecoratorNode : public BTNode
 	{
 	public:
 		BTDecoratorNode();

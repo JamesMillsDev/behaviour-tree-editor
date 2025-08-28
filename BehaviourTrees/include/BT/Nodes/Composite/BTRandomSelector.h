@@ -3,7 +3,7 @@
 
 namespace BT
 {
-	class BTRandomSelector : public BTCompositeNode
+	class DLL BTRandomSelector : public BTCompositeNode
 	{
 	public:
 		ENodeResult Execute(void* userData) override;

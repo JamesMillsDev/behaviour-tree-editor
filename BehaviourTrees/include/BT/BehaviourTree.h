@@ -4,7 +4,7 @@
 
 namespace BT
 {
-	class BehaviourTree
+	class DLL BehaviourTree
 	{
 	public:
 		template<typename T>

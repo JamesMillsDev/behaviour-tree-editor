@@ -8,7 +8,7 @@ using std::string;
 
 namespace BT
 {
-	class BTLogTask : public BTTaskNode
+	class DLL BTLogTask : public BTTaskNode
 	{
 	public:
 		BTLogTask(string message);

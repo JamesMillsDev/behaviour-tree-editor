@@ -4,7 +4,7 @@
 
 namespace BT
 {
-	class BTRepeatDecorator : public BTDecoratorNode
+	class DLL BTRepeatDecorator : public BTDecoratorNode
 	{
 	public:
 		BTRepeatDecorator(int repeatCount);

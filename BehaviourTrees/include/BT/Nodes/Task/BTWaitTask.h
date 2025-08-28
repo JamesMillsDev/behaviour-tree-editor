@@ -9,7 +9,7 @@ typedef std::chrono::time_point<std::chrono::high_resolution_clock> time_point;
 
 namespace BT
 {
-	class BTWaitTask : public BTTaskNode
+	class DLL BTWaitTask : public BTTaskNode
 	{
 	public:
 		BTWaitTask(float time);
