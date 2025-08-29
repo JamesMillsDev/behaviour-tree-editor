@@ -61,3 +61,13 @@ set_target_properties(BehaviourTreeEditor PROPERTIES
     CXX_STANDARD 20
     CXX_STANDARD_REQUIRED ON
 )
+
+add_custom_command(
+    TARGET BehaviourTreeEditor
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "$<TARGET_FILE:${BEHAVIOUR_TREES_TARGET}>"
+        "$<TARGET_FILE_DIR:BehaviourTreeEditor>"
+    COMMENT "Copying BehaviourTrees DLL to executable directory"
+    VERBATIM
+)
