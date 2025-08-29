@@ -1,6 +1,10 @@
 #pragma once
 
+#include <nlohmann/json.hpp>
+
 #include "Nodes/BTNode.h"
+
+using json = nlohmann::json;
 
 namespace BT
 {
@@ -9,6 +13,8 @@ namespace BT
 	public:
 		template<typename T>
 		static T* CastUserData(void* userData);
+
+		static BehaviourTree* LoadTree(const string& jsonFile);
 
 	public:
 		BehaviourTree();
@@ -33,6 +39,19 @@ namespace BT
 
 		private:
 			BTNode* m_child;
+
+		};
+
+		class BTParser
+		{
+			friend BehaviourTree;
+
+		private:
+			static BehaviourTree* Parse(const string& jsonFile);
+			static bool LoadJson(const string& jsonFile, json& json);
+
+			static BTNode* BuildTree(const json& json);
+			static BTNode* BuildNode(const json& nodeJson);
 
 		};
 

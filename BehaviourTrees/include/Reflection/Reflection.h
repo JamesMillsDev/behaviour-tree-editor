@@ -3,14 +3,11 @@
 
 #include "NodeRegistry.h"
 
-#include <iostream>
-
 #define REFLECT_NODE_NoParams(TYPE) \
 	static BTNode* CreateInstance(const vector<BT::Reflection::ParamValue>&) { \
         return new TYPE(); \
     } \
     static bool RegisterType() { \
-		std::cout << "Registering: " << #TYPE << "\n"; \
         BT::Reflection::NodeRegistry::Instance().RegisterNode( \
             #TYPE, \
             [](const vector<BT::Reflection::ParamValue>& params) -> BT::BTNode* { \
@@ -28,7 +25,6 @@
         return new TYPE(BT::Reflection::GetParam<T1>(params[0])); \
     } \
     static bool RegisterType() { \
-		std::cout << "Registering: " << #TYPE << "\n"; \
         BT::Reflection::NodeRegistry::Instance().RegisterNode( \
             #TYPE, \
             [](const vector<BT::Reflection::ParamValue>& params) -> BT::BTNode* { \
@@ -47,7 +43,6 @@
                        BT::Reflection::GetParam<T2>(params[1])); \
     } \
     static bool RegisterType() { \
-		std::cout << "Registering: " << #TYPE << "\n"; \
         BT::Reflection::NodeRegistry::Instance().RegisterNode( \
             #TYPE, \
             [](const vector<BT::Reflection::ParamValue>& params) -> BT::BTNode* { \
@@ -68,7 +63,6 @@
                        BT::Reflection::GetParam<T3>(params[2])); \
     } \
     static bool RegisterType() { \
-		std::cout << "Registering: " << #TYPE << "\n"; \
         BT::Reflection::NodeRegistry::Instance().RegisterNode( \
             #TYPE, \
             [](const vector<BT::Reflection::ParamValue>& params) -> BT::BTNode* { \
@@ -91,7 +85,6 @@
                        BT::Reflection::GetParam<T4>(params[3])); \
     } \
     static bool RegisterType() { \
-		std::cout << "Registering: " << #TYPE << "\n"; \
         BT::Reflection::NodeRegistry::Instance().RegisterNode( \
             #TYPE, \
             [](const vector<BT::Reflection::ParamValue>& params) -> BT::BTNode* { \
