@@ -12,6 +12,9 @@ namespace BT
 	class DLL BTWaitTask : public BTTaskNode
 	{
 	public:
+		REFLECT_NODE_OneParam(BTWaitTask, float, "time")
+
+	public:
 		BTWaitTask(float time);
 
 	public:

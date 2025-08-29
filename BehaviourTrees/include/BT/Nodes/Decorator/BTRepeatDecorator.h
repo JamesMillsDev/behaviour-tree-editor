@@ -7,6 +7,9 @@ namespace BT
 	class DLL BTRepeatDecorator : public BTDecoratorNode
 	{
 	public:
+		REFLECT_NODE_OneParam(BTRepeatDecorator, int, "repeatCount")
+
+	public:
 		BTRepeatDecorator(int repeatCount);
 
 	public:

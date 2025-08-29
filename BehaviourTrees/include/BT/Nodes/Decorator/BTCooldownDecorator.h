@@ -12,6 +12,9 @@ namespace BT
 	class DLL BTCooldownDecorator : public BTDecoratorNode
 	{
 	public:
+		REFLECT_NODE_OneParam(BTCooldownDecorator, float, "time")
+
+	public:
 		BTCooldownDecorator(float time);
 
 	public:

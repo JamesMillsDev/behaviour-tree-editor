@@ -5,13 +5,6 @@
 
 namespace BT
 {
-	enum class ENodeResult : unsigned char
-	{
-		Failed,
-		Succeeded,
-		Pending
-	};
-
 	class DLL BTNode
 	{
 		friend class BehaviourTree;
