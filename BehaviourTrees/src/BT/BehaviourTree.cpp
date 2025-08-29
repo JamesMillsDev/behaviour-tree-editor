@@ -130,6 +130,36 @@ namespace BT
 
 	BTNode* BehaviourTree::BTParser::BuildNode(const json& nodeJson)
 	{
-		return NodeRegistry::Instance().CreateNode(nodeJson["id"], {});
+		vector<ParamValue> params;
+
+		if (nodeJson.contains("data"))
+		{
+			for (const auto& d : nodeJson["data"])
+			{
+				params.emplace_back(GetValueFor(d["type"].get<string>(), d["value"]));
+			}
+		}
+
+		return NodeRegistry::Instance().CreateNode(nodeJson["id"], params);
+	}
+
+	ParamValue BehaviourTree::BTParser::GetValueFor(const string& type, const json& value)
+	{
+		if (type == "int")
+		{
+			return value.get<int>();
+		}
+
+		if (type == "float")
+		{
+			return value.get<float>();
+		}
+
+		if (type == "bool")
+		{
+			return value.get<bool>();
+		}
+
+		return value.get<string>();
 	}
 }

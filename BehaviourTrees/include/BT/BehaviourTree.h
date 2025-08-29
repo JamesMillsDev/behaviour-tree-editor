@@ -4,6 +4,9 @@
 
 #include "Nodes/BTNode.h"
 
+using BT::Reflection::ParamInfo;
+using BT::Reflection::ParamValue;
+
 using json = nlohmann::json;
 
 namespace BT
@@ -52,6 +55,8 @@ namespace BT
 
 			static BTNode* BuildTree(const json& json);
 			static BTNode* BuildNode(const json& nodeJson);
+
+			static ParamValue GetValueFor(const string& type, const json& value);
 
 		};
 

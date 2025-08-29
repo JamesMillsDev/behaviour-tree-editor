@@ -80,7 +80,7 @@ namespace BT
 			else if constexpr (is_same_v<T, ENodeResult>)
 			{
 				const string& str = get<string>(value);
-				if (str == "Success")
+				if (str == "Succeeded")
 				{
 					return ENodeResult::Succeeded;
 				}
